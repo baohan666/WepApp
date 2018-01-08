@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--
+        获取像素比：window.devicePixelRatio
+
+        1 / 像素 = 缩放的比例
+    -->
+    <script>
+        // console.log(1 / window.devicePixelRatio);
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+    </script>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">user-scalable</div>
+</body>
+
+</html>

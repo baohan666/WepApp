@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+    </script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        .box{
+            width: 10em;
+            height: 10em;
+            margin: 0.33333em;
+            background: pink;
+            float: left;
+            font-size: 30px;
+            /*1em = ?*/
+        }
+        div:nth-of-type(1){
+            font-size: 60px;
+            width: 5em;
+            height: 5em;
+            margin: 0.166667em;
+        }
+    </style>
+    <!--
+        em:
+            相对单位
+            根据自身或者父级字体大小进行计算
+    -->
+</head>
+
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+</body>
+
+</html>

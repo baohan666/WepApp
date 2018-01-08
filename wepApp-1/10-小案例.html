@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+
+        var initWidth = window.document.documentElement.clientWidth;
+        document.getElementsByTagName('html')[0].style.fontSize = initWidth / 10 + 'px';
+    </script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        div{
+            width: 4.6875rem;
+            height: 4.6875rem;
+            margin: 0.15625rem;
+            background: plum;
+            float: left;
+        }
+    </style>
+    <!--
+        目标（测量）元素 / rem大小 = 实际rem的值
+        在符合设计图和设备尺寸时：
+            1rem = 64px
+    -->
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>

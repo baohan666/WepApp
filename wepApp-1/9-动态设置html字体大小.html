@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+
+        console.log(window.document.documentElement.clientWidth);
+
+        var initWidth = window.document.documentElement.clientWidth;
+        document.getElementsByTagName('html')[0].style.fontSize = initWidth / 10 + 'px';
+    </script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        .box{
+            width: 10rem;
+            height: 10rem;
+            margin: 0.33333rem;
+            background: pink;
+            float: left;
+            font-size: 30px;
+        }
+    </style>
+    <!--
+        ? / 10 = fontSize
+
+        根据设计图尺寸，找到符合该尺寸的设备(动态缩放比例后)
+
+    -->
+</head>
+
+<body>
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+</body>
+
+</html>

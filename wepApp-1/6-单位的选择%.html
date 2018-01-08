@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+    </script>
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+        #box{
+            width: 46.875%;
+            height: 300px;
+            margin: 10px;
+            background: pink;
+            /*display: inline-block;*/
+            float: left;
+        }
+    </style>
+    <!--
+        %:
+            相对单位
+            在宽度计算上还是不错的，但是高度上就比较麻烦
+    -->
+</head>
+
+<body>
+    <div id="box"></div><div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+    <div id="box"></div>
+</body>
+
+</html>
