@@ -1,0 +1,24 @@
+webkit
+
+pc 固定1200
+
+iphone 默认是视口大小是980像素,会进行缩放
+
+width=device-width 把viewport (视口)设置为设备的宽度
+并且把initial-scale=1.0 把比例设为1
+user-scalable=no 禁止用户缩放窗口磊小
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+
+1.百分比 如果是指定的高度,非常不方便,大屏手机有优势,技术简单
+
+2.rem
+
+3.弹性盒
+
+4.响应式
+
+m站 移动端站点
+
+max-width
+min-width
