@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--
+        获取像素比：window.devicePixelRatio
+
+        1 / 像素 = 缩放的比例
+
+        适配：在不同尺寸的手机设备上，页面相对性的达到合理的展示（自适应）或者统一效果的等比缩放
+
+        比例缩放适配（初始比例）
+        把所有机型的设备独立像素设置成一致的
+        1，	viewport需要通过js动态的设置，（不能直接把device的值设置成数值）
+        2，	通过设置比例（吃屎比例以及缩放比例），把宽度缩放成一致的
+
+        注意：
+        Viewport里给了缩放以后，最终的页面宽度是拿原来的值除以缩放比例，而不是乘以缩放比例
+        缺点：
+        1、	就像在讲viewport设置宽度的时候，可以把宽度设置成一个固定值一样，会出现所有的手机看上去都是同样的大小。没有分别了，不太好
+        2、	算出的的值在一些有小数的情况下，可能会出现误差（无关紧要），因为设备独立像素不能有小数
+
+    -->
+    <script>
+        // console.log(1 / window.devicePixelRatio);
+        var initScale = 1 / window.devicePixelRatio;
+        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+    </script>
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">user-scalable</div>
+</body>
+
+</html>
