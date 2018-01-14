@@ -1,0 +1,50 @@
+ 
+设置git的user name和email：
+$ git config --global user.name "baohan666"  //账户名
+$ git config --global user.email "baohan9680foxmail.com" //邮箱地址
+
+
+
+生成SSH密钥过程：
+1.查看是否已经有了ssh密钥：cd ~/.ssh
+2.生成密钥：
+$ ssh-keygen -t rsa -C "baohan9680foxmail.com"
+按3个回车，密码为空。
+最后得到了两个文件：id_rsa和id_rsa.pub
+3.添加密钥到ssh：
+需要之前输入密码。
+4.在github上添加ssh密钥，这要添加的是“id_rsa.pub”里面的公钥。
+5.测试：ssh git@github.com
+
+
+
+
+ 
+git 连接远程仓库方法
+
+方案一 : 本地创建项目根目录, 然后与远程Git关联, 之后的操作一样：
+    #创建新文件夹
+    mkdir xxx
+    #进入
+    cd xxx 
+    #初始化Git仓库 
+    git init
+    #提交改变到缓存
+    git commit -m ''
+    #本地git仓库关联GitHub仓库 
+    git remote add origin git@
+    #提交到GitHub中 
+    git push -u origin master
+
+方案二 : 方案二就是不用关联Git仓库, 直接从Git中克隆源码到本地, 项目根目录也不用创建;
+    #从GitHub上克隆项目到本地,直接在仓库根目录即可, 不用再创建项目根目录 ; 
+    git clone 
+    #添加文件 
+    git add ./*  # 将目录中所有文件添加;
+    #提交缓存 
+    git commit -m '提交';
+    #提交到远程GitHub仓库 
+    git push -u origin master ;
+    
+    
+    
