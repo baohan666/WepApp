@@ -1,0 +1,128 @@
+/*满屏 开始*/
+body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.jd_fullPage{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+}
+/*满屏 结束*/
+/*顶部通栏 开始*/
+.jd_topBar{
+    height: 45px;
+    width: 100%;
+    background:url("../images/header-bg.png") repeat-x;
+    background-size: 100% 44px;
+    display: block;
+    border-bottom: 1px solid #dcdcdc;
+    position: relative;
+    z-index: 1000;
+}
+/*返回按钮*/
+.jd_topBar .icon_back{
+    height: 44px;
+    width: 40px;
+    display: block;
+    overflow: hidden;
+    background-position: -20px 0;
+    padding: 12px 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.jd_topBar form{
+    width: 100%;
+    padding: 0 40px;
+}
+.jd_topBar form input{
+    height: 32px;
+    width: 100%;
+    border: 1px solid #bfbfbf;
+    padding: 0 8px;
+    margin-top: 7px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+/*菜单按钮*/
+.jd_topBar .icon_menu{
+    height: 44px;
+    width: 40px;
+    display: block;
+    overflow: hidden;
+    background-position: -60px 0;
+    padding: 12px 10px;
+    background-clip: content-box;
+    background-origin: content-box;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/*顶部通栏 结束*/
+/*分类 开始*/
+.jd_category{
+    height: 100%;
+    width: 100%;
+    padding-top: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.jd_category .category_left{
+    height: 100%;
+    width: 90px;
+    padding-top: 45px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.jd_category .category_left ul{
+    transition: all 0.2s ease 0s;
+}
+.jd_category .category_left ul li{
+    height: 50px;
+    width: 90px;
+    display: block;
+    line-height: 50px;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background: #f3f4f6;
+    text-align: center;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+.jd_category .category_left ul li:first-child{
+    border-top: 0;
+}
+
+.jd_category .category_right{
+    height: 100%;
+    width: 100%;
+    padding-left: 90px;
+}
+
+.jd_category .category_right .category_banner{
+    width: 100%;
+}
+
+
+.jd_category .jd_scroll{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+.jd_category .jd_scroll .jd_scroll_con{
+
+}
+/*分类 结束*/
