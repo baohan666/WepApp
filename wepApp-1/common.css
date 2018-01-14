@@ -1,0 +1,21 @@
+
+/*
+ * 公共样式
+ */
+
+
+.clearfix::before,
+.clearfix::after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+
+[class^="icon_"]{
+    background: url("../images/") no-repeat;
+    background-size:;
+}
