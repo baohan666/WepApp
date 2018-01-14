@@ -3,6 +3,12 @@
  * 公共样式
  */
 
+.fl_lt{
+	float:left;
+}
+.fl_rt{
+	float:right;
+}
 
 .clearfix::before,
 .clearfix::after{
@@ -15,7 +21,8 @@
 }
 
 
-[class^="icon_"]{
+[class^="icon-"],
+[class*=" icon-"]{
     background: url("../images/") no-repeat;
     background-size:;
 }
