@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
     <title>Document</title>
-    <script>
-        var initScale = 1 / window.devicePixelRatio;
-        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
-    </script>
+
     <style>
         body{
             margin: 0;
@@ -18,20 +16,24 @@
             width: 46.875%;
             height: 300px;
             margin: 10px;
-            background: pink;
-            /*display: inline-block;*/
+            background: pink; 
             float: left;
         }
     </style>
     <!--
-        %:
-            相对单位
-            在宽度计算上还是不错的，但是高度上就比较麻烦
+        %:相对单位
+        Pc端 移动端 也使用。 
+    
+        百分比布局问题：
+        1，	百分比的值不好计算
+        2，	需要确定父级的大小，因为要根据父级的大小进行计算
+        3，	宽度可以设置，但是高度不好设置
+
     -->
 </head>
 
 <body>
-    <div id="box"></div><div id="box"></div>
+    <div id="box"></div>
     <div id="box"></div>
     <div id="box"></div>
     <div id="box"></div>
