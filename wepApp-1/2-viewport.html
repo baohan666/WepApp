@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no，initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--
+        viewport（视口：可视区窗口）
+        Content   视口里的相关设置
+        Width 屏幕的宽度
+        Device：width 设备的实际宽度 不设置的时候默认为这个值
+        数值（不加单位） 不建议设置数值（安卓设备低版本不支持）
+        Height 屏幕的高度
+        Device-height 设备的实际高度
+        数值（不加单位） 一般不用设置高度
+        User-scalable   是否允许缩放 （no||yes）
+        Yes  允许
+        No  不允许缩放
+        Initial-scaleble  初始比例（要与最小缩放比例保持一致）
+        加上这个后它并不是把每个元素都缩放了。而是改变了设备独立像素
+        Minimum-scale 最小能够缩放的比例 允许缩放的最小比例
+        Maximum-scale 最大能够缩放的比例 允许缩放的最大比例
+        1、	如果用缩放的话，就可以把width与user-scalable去掉
+        2、	用了缩放后。并不是这正的缩放了。而是改变了屏幕的尺寸（设备的独立像素）
+        本来是300个点变成100个点  
+
+   
+       
+    -->
+    <style>
+        #box{
+            width: 400px;
+            height: 400px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">user-scalable</div>
+</body>
+
+</html>
