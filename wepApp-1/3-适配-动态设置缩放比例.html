@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!--
+        
+
+
+
+        像素比把一个像素 放大至 N个像素去显示 
         获取像素比：window.devicePixelRatio
 
         1 / 像素 = 缩放的比例
 
+        
         适配：在不同尺寸的手机设备上，页面相对性的达到合理的展示（自适应）或者统一效果的等比缩放
-
         比例缩放适配（初始比例）
         把所有机型的设备独立像素设置成一致的
         1，	viewport需要通过js动态的设置，（不能直接把device的值设置成数值）
@@ -26,8 +31,9 @@
     -->
     <script>
         // console.log(1 / window.devicePixelRatio);
-        var initScale = 1 / window.devicePixelRatio;
-        document.write('<meta name="viewport" content="width=device-width,user-scalable=no，initial-scale='+ initScale +',minimum-scale='+ initScale +',maximum-scale='+ initScale +'">')
+        var scale = 1 / window.devicePixelRatio;
+        document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+     
     </script>
     <style>
         #box{
