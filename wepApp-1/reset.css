@@ -1,0 +1,119 @@
+
+
+
+* {
+    //以border开始计算宽度
+   -webkit-box-sizing: border-box;
+    //兼容性
+    box-sizing: border-box;
+
+}
+
+//禁止文本缩放 字体设置  取消touch高亮效果
+
+html {
+
+    width: 100%;
+
+    height: 100%;
+
+   margin: 0px;
+
+   padding: 0px;
+  //iPhone 和 Android 的浏览器纵向 (Portrate mode) 和橫向 (Landscape mode) 模式皆有自动调整字体大小的功能。控制它的就是 CSS 中的 -webkit-text-size-adjust。
+
+text-size-adjust 设为 none 或者 100% 关闭字体大小自动调整功能.
+   -webkit-text-size-adjust: 100%;
+ //默认的字体
+   font-family: -apple-system, "PingFang SC","Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+//当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景。要重设这个表现，你可以设置-webkit-tap-highlight-color为任何颜色。想要禁用这个高亮，设置颜色的值为0即可
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+   font-size: 62.5%;
+
+    background: transparent;
+
+   }
+
+body {
+
+    width: 100%;
+
+    height: 100%;
+  
+  //属性控制元素在移动设备上是否使用滚动回弹效果.
+   -webkit-overflow-scrolling: touch;
+
+ }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, sumary {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+//清除输入框内阴影
+
+input, select,textarea {
+
+border: 0;
+
+-webkit-appearance: none;
+
+appearance:none;
+
+}
+
+ol, ul {
+
+    list-style: none;
+
+}
+
+//禁止选中文本内容
+
+*:not(input, select, textArea) {
+
+    -webkit-user-select: none;
+
+}
+
+//禁用长按页面时的弹出菜单(iOS下有效) ,img和a标签都要加
+
+img,a{
+
+-webkit-touch-callout:none;
+
+}
+
+a,a:active,a:hover {
+
+text-decoration: none;
+
+}
+
+//去掉点击链接和文本框对象时默认的灰色半透明覆盖层(iOS)或者虚框(Android)
+
+a,button,input,textarea{ 
+
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+
+}
+ 
+@media screen and (min-width:100px){ /*  iPhone 4,5 */
+ html{ font-size: 10px;}
+}
+@media screen and (min-width:320px){ /*  iPhone 4,5 */
+ html{ font-size: 10px;}
+}
+@media screen and (min-width:375px){ /*  iPhone 6 */
+ html{ font-size: 12px;}
+}
+@media screen and (min-width:414px){  /*  iPhone 6 plus */
+ html{ font-size: 12px;}
+}
+@media screen and (min-width:600px){
+    html{ font-size:14px;}
+}
